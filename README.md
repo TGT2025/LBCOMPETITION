@@ -53,7 +53,7 @@ On **1 June 2025**:
 
 4. When prompted, enter:
 
-   LB DRAW JUNE 2025
+   TIMESTAMP USED (WILL BE UPDATED 02/06/2025)
 
 5. You’ll get the **same winners we posted**
 
