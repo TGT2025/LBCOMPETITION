@@ -1,63 +1,71 @@
-# 🎉 LB Competition Draw – June 2025
+# 🎯 LB Competition JUNE 2025 – Draw System
 
-## ✅ Timestamp used:
-`2025-06-01 23:59:59 UTC`
-
-## 🔐 SHA256 of timestamp:
-`1a41f1f14573a2d4f2defced48f0b92231e33ff2533b089bd9bd75d0153b8694`
+This repo contains the **official provably fair draw system** used for the LB JUNE 2025 Competition.
 
 ---
 
-## 📄 How it works (provably fair)
-1. Every order marked **sent** between 15 April and 1 June was extracted.
-2. Each order number was saved into `entries.txt`.
-3. A **public timestamp** was chosen as the seed.
-4. That seed was hashed with SHA256 and used to initialize a random number generator.
-5. We picked 5 winners **randomly, fairly, and verifiably**.
-6. Anyone can re-run the draw using the exact same inputs and script.
+## 🧾 How the Draw Works
+
+Every order marked **`sent`** between:
+
+```
+🗓️ 15 April → 1 June 2025 
+```
+
+…is entered into the competition.
+
+The draw is based on:
+- A **public timestamp string**
+- SHA256 hash of that string
+- Random generator seeded with the hash
+- 5 winners randomly selected from `entries.txt`
+
+---
+
+## 🔐 Fairness Protocol
+
+This repo is public and timestamped.  
+No changes will be made to the draw code.
+
+On **1 June 2025**:
+- We will publish the full `entries.txt` list of order numbers
+- We will publish the **timestamp string** used
+- Anyone can run the script and verify the same result
+
+---
+
+## 🎯 Files
+
+| File          | Purpose                                      |
+|---------------|-----------------------------------------------|
+| `draw.py`     | The official drawing script                   |
+| `entries.txt` | *(Will be uploaded on draw day)* Eligible `sent` orders |
 
 ---
 
 ## 🧪 How to Verify
-**Anyone can verify the draw in 3 easy steps:**
 
-### 1. Download the Repo Files
-- [entries.txt](./entries.txt)
-- [draw.py](./draw.py)
+1. Download this repo
+2. Open terminal or PowerShell
+3. Run:
 
-### 2. Run the Script
-Open terminal or PowerShell in the folder and run:
-```bash
-python draw.py
-```
+   python draw.py
 
-### 3. Enter the Same Timestamp
-```
-2025-06-01 23:59:59 UTC
-```
+4. When prompted, enter:
 
-✅ You will get the **same 5 winners** every time.
+   LB DRAW JUNE 2025
+
+5. You’ll get the **same winners we posted**
 
 ---
 
-## 🎯 Winners:
-1. `qYvIdM7Wow4iVmKTO8g6ilqY`
-2. `eMKqzyXjA1bzVFB4kPaGOXZ8`
-3. `i2MKkqaZgQRPBQEWKpD1iE8O`
-4. `anR9KpNZ7DtDVC4X10VxL3LR`
-5. `2hzlirTUsdkyF2Rg5b6VrZMU`
+## 🏆 What This Guarantees
 
----
+- ✅ You see the full list used
+- ✅ You see the exact script used
+- ✅ You see the public timestamp
+- ✅ You can reproduce the result
+- ✅ Nobody can cheat, edit, or change the outcome
 
-## 🧠 Fairness Guarantee
-- The timestamp is public and known
-- Its SHA256 hash was used to seed the RNG
-- The draw script is transparent
-- The entry list is frozen
-- Anyone can reproduce the same result
+This is the highest standard of fairness in community draws.
 
-🌟 No manipulation possible. Verifiable by the community.
-
----
-
-Built with transparency by TGT2025 🚀
